@@ -10,6 +10,7 @@ int main(void)
     int rig;
     int col;
     int alf=65;
+    int posizione;
     srand(time(NULL));
 
     rig=(rand()+time(NULL))%10;
