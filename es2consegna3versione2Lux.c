@@ -34,29 +34,32 @@ int main(void)
            str3[i]=*(ptr+(int)strlen(str2)+j);
        }
        str3[i]='\0';
-   }
 
-   while(strstr(str3,str2)!= NULL)
-   {
-       ptr=strstr(str3,str2);
-       int i=0;
-       for(;str3+i<ptr;i++)
+       while(strstr(str3,str2)!= NULL)
        {
-           str3[i]=*(str3+i);
+            ptr=strstr(str3,str2);
+            int i=0;
+            for(;str3+i<ptr;i++)
+            {
+                str3[i]=*(str3+i);
+            }
+            int n=ptr-str3;
+            str3[n]='*';
+            i++;
+            for(int j=0;ptr+(int)strlen(str2)+j<=str3+strlen(str3);j++,i++)
+            {
+                str3[i]=*(ptr+(int)strlen(str2)+j);
+            }
+            str3[i]='\0';
        }
-       int n=ptr-str3;
-       str3[n]='*';
-       i++;
-       for(int j=0;ptr+(int)strlen(str2)+j<=str3+strlen(str3);j++,i++)
-       {
-           str3[i]=*(ptr+(int)strlen(str2)+j);
-       }
-       str3[i]='\0';
 
-
+       puts(str3);
    }
+   else puts("nessuna occorrenza");
 
 
-    puts(str3);
+
+
+
     return 0;
 }
