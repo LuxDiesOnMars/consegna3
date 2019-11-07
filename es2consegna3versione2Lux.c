@@ -29,7 +29,7 @@ int main(void)
        int n=ptr-str;
        str3[n]='*';
        i++;
-       for(int j=0;ptr+(int)strlen(str2)+j<=str+strlen(str);j++,i++)
+       for(int j=0;ptr+(int)strlen(str2)+j<=str+strlen(str)-1;j++,i++)
        {
            str3[i]=*(ptr+(int)strlen(str2)+j);
        }
@@ -46,7 +46,7 @@ int main(void)
             int n=ptr-str3;
             str3[n]='*';
             i++;
-            for(int j=0;ptr+(int)strlen(str2)+j<=str3+strlen(str3);j++,i++)
+            for(int j=0;ptr+(int)strlen(str2)+j<=str3+strlen(str3)-1;j++,i++)
             {
                 str3[i]=*(ptr+(int)strlen(str2)+j);
             }
