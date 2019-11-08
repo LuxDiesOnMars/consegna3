@@ -1,20 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define MAXDIM 20
+#define MAXDIM 30
 
 int main(void)
 {
-
     char str2[MAXDIM];
     char str1[MAXDIM];
     memset(str1,'\0',sizeof(str1));
     memset(str2,'\0',sizeof(str2));
     puts("inserisci stringa1:\n");
-    scanf("%19s",str1);
+    scanf("%29s",str1);
     fflush(stdin);
     puts("inserisci stringa per confronto:\n");
-    scanf("%9s",str2);
+    scanf("%29s",str2);
     fflush(stdin);
     char *ptr;
 
@@ -33,6 +32,7 @@ int main(void)
 
     }
 
+    puts("stringa finale:");
     puts(str1);
 
 
